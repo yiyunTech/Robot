@@ -1,0 +1,879 @@
+fileFormatVersion: 2
+guid: 7cb602eed51f1654cae4338b87f689de
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: _M3_Anim_Data
+    100002: ADJ_Bone_BackWires_01_SkinPoint
+    100004: ADJ_Bone_BackWires_02_SkinPoint
+    100006: ADJ_Bone_BackWires_03_SkinPoint
+    100008: ADJ_Bone_Cables_BL_01_SkinPoint
+    100010: ADJ_Bone_Cables_BL_02_SkinPoint
+    100012: ADJ_Bone_Cables_BL_03_SkinPoint
+    100014: ADJ_Bone_Cables_BL_04_SkinPoint
+    100016: ADJ_Bone_Cables_BM_01_SkinPoint
+    100018: ADJ_Bone_Cables_BM_02_SkinPoint
+    100020: ADJ_Bone_Cables_BR_01_SkinPoint
+    100022: ADJ_Bone_Cables_BR_02_SkinPoint
+    100024: ADJ_Bone_Cables_BR_03_SkinPoint
+    100026: ADJ_Bone_Cables_L_01_SkinPoint
+    100028: ADJ_Bone_Cables_L_02_SkinPoint
+    100030: ADJ_Bone_Cables_L_03_SkinPoint
+    100032: ADJ_Bone_Cables_RB_02_SkinPoint
+    100034: ADJ_Bone_Cables_RB_03_SkinPoint
+    100036: ADJ_Ctrl_Arm_L_SkinPoint
+    100038: ADJ_Ctrl_Arm_R_SkinPoint
+    100040: ADJ_Ctrl_CableAnchor_B_SkinPoint
+    100042: ADJ_Ctrl_CableAnchor_L_SkinPoint
+    100044: ADJ_Ctrl_CableAnchor_R_SkinPoint
+    100046: ADJ_Ctrl_CableAnchor_TR_SkinPoint
+    100048: ADJ_Ctrl_Cables_R_SkinPoint
+    100050: ADJ_Ctrl_Cheek_L_SkinPoint
+    100052: ADJ_Ctrl_Cheek_R_SkinPoint
+    100054: ADJ_Ctrl_Chest_SkinPoint
+    100056: ADJ_Ctrl_Eye_L_SkinPoint
+    100058: ADJ_Ctrl_Eye_R_SkinPoint
+    100060: ADJ_Ctrl_Eyelid_L_SkinPoint
+    100062: ADJ_Ctrl_Eyelid_Lower_L_SkinPoint
+    100064: ADJ_Ctrl_Eyelid_Lower_R_SkinPoint
+    100066: ADJ_Ctrl_Eyelid_R_SkinPoint
+    100068: ADJ_Ctrl_Head_SkinPoint
+    100070: ADJ_Ctrl_Jaw_SkinPoint
+    100072: ADJ_Ctrl_LeftBrow_L_SkinPoint
+    100074: ADJ_Ctrl_LeftBrow_M_SkinPoint
+    100076: ADJ_Ctrl_LeftBrow_R_SkinPoint
+    100078: ADJ_Ctrl_LeftCableHang_SkinPoint
+    100080: ADJ_Ctrl_LowerBack_SkinPoint
+    100082: ADJ_Ctrl_MechArmCable_B_SkinPoint
+    100084: ADJ_Ctrl_MechArmCable_F_SkinPoint
+    100086: ADJ_Ctrl_Mouth_BL_SkinPoint
+    100088: ADJ_Ctrl_Mouth_BR_SkinPoint
+    100090: ADJ_Ctrl_Mouth_LB_SkinPoint
+    100092: ADJ_Ctrl_Mouth_LT_SkinPoint
+    100094: ADJ_Ctrl_Mouth_M_SkinPoint
+    100096: ADJ_Ctrl_Mouth_RB_SkinPoint
+    100098: ADJ_Ctrl_Mouth_RT_SkinPoint
+    100100: ADJ_Ctrl_Mouth_TL_SkinPoint
+    100102: ADJ_Ctrl_Mouth_TR_SkinPoint
+    100104: ADJ_Ctrl_Neck_SkinPoint
+    100106: ADJ_Ctrl_Nostril_L_SkinPoint
+    100108: ADJ_Ctrl_Nostril_R_SkinPoint
+    100110: ADJ_Ctrl_Pelvis_SkinPoint
+    100112: ADJ_Ctrl_RearArm_01_SkinPoint
+    100114: ADJ_Ctrl_RearArm_02_SkinPoint
+    100116: ADJ_Ctrl_RearArm_03_SkinPoint
+    100118: ADJ_Ctrl_RightBrow_L_SkinPoint
+    100120: ADJ_Ctrl_RightBrow_M_SkinPoint
+    100122: ADJ_Ctrl_RightBrow_R_SkinPoint
+    100124: ADJ_Ctrl_RightCableHang_SkinPoint
+    100126: ADJ_Mesh_Backside
+    100128: //RootNode
+    100130: Ref_Center
+    100132: Ref_Head
+    100134: Ref_Origin
+    100136: Ref_Overhead
+    100138: Ref_Target
+    100140: SM_Adjutant_0
+    100142: SM_Adjutant_1
+    100144: SM_Adjutant_10
+    100146: SM_Adjutant_11
+    100148: SM_Adjutant_2
+    100150: SM_Adjutant_3
+    100152: SM_Adjutant_4
+    100154: SM_Adjutant_5
+    100156: SM_Adjutant_6
+    100158: SM_Adjutant_7
+    100160: SM_Adjutant_8
+    100162: SM_Adjutant_9
+    400000: _M3_Anim_Data
+    400002: ADJ_Bone_BackWires_01_SkinPoint
+    400004: ADJ_Bone_BackWires_02_SkinPoint
+    400006: ADJ_Bone_BackWires_03_SkinPoint
+    400008: ADJ_Bone_Cables_BL_01_SkinPoint
+    400010: ADJ_Bone_Cables_BL_02_SkinPoint
+    400012: ADJ_Bone_Cables_BL_03_SkinPoint
+    400014: ADJ_Bone_Cables_BL_04_SkinPoint
+    400016: ADJ_Bone_Cables_BM_01_SkinPoint
+    400018: ADJ_Bone_Cables_BM_02_SkinPoint
+    400020: ADJ_Bone_Cables_BR_01_SkinPoint
+    400022: ADJ_Bone_Cables_BR_02_SkinPoint
+    400024: ADJ_Bone_Cables_BR_03_SkinPoint
+    400026: ADJ_Bone_Cables_L_01_SkinPoint
+    400028: ADJ_Bone_Cables_L_02_SkinPoint
+    400030: ADJ_Bone_Cables_L_03_SkinPoint
+    400032: ADJ_Bone_Cables_RB_02_SkinPoint
+    400034: ADJ_Bone_Cables_RB_03_SkinPoint
+    400036: ADJ_Ctrl_Arm_L_SkinPoint
+    400038: ADJ_Ctrl_Arm_R_SkinPoint
+    400040: ADJ_Ctrl_CableAnchor_B_SkinPoint
+    400042: ADJ_Ctrl_CableAnchor_L_SkinPoint
+    400044: ADJ_Ctrl_CableAnchor_R_SkinPoint
+    400046: ADJ_Ctrl_CableAnchor_TR_SkinPoint
+    400048: ADJ_Ctrl_Cables_R_SkinPoint
+    400050: ADJ_Ctrl_Cheek_L_SkinPoint
+    400052: ADJ_Ctrl_Cheek_R_SkinPoint
+    400054: ADJ_Ctrl_Chest_SkinPoint
+    400056: ADJ_Ctrl_Eye_L_SkinPoint
+    400058: ADJ_Ctrl_Eye_R_SkinPoint
+    400060: ADJ_Ctrl_Eyelid_L_SkinPoint
+    400062: ADJ_Ctrl_Eyelid_Lower_L_SkinPoint
+    400064: ADJ_Ctrl_Eyelid_Lower_R_SkinPoint
+    400066: ADJ_Ctrl_Eyelid_R_SkinPoint
+    400068: ADJ_Ctrl_Head_SkinPoint
+    400070: ADJ_Ctrl_Jaw_SkinPoint
+    400072: ADJ_Ctrl_LeftBrow_L_SkinPoint
+    400074: ADJ_Ctrl_LeftBrow_M_SkinPoint
+    400076: ADJ_Ctrl_LeftBrow_R_SkinPoint
+    400078: ADJ_Ctrl_LeftCableHang_SkinPoint
+    400080: ADJ_Ctrl_LowerBack_SkinPoint
+    400082: ADJ_Ctrl_MechArmCable_B_SkinPoint
+    400084: ADJ_Ctrl_MechArmCable_F_SkinPoint
+    400086: ADJ_Ctrl_Mouth_BL_SkinPoint
+    400088: ADJ_Ctrl_Mouth_BR_SkinPoint
+    400090: ADJ_Ctrl_Mouth_LB_SkinPoint
+    400092: ADJ_Ctrl_Mouth_LT_SkinPoint
+    400094: ADJ_Ctrl_Mouth_M_SkinPoint
+    400096: ADJ_Ctrl_Mouth_RB_SkinPoint
+    400098: ADJ_Ctrl_Mouth_RT_SkinPoint
+    400100: ADJ_Ctrl_Mouth_TL_SkinPoint
+    400102: ADJ_Ctrl_Mouth_TR_SkinPoint
+    400104: ADJ_Ctrl_Neck_SkinPoint
+    400106: ADJ_Ctrl_Nostril_L_SkinPoint
+    400108: ADJ_Ctrl_Nostril_R_SkinPoint
+    400110: ADJ_Ctrl_Pelvis_SkinPoint
+    400112: ADJ_Ctrl_RearArm_01_SkinPoint
+    400114: ADJ_Ctrl_RearArm_02_SkinPoint
+    400116: ADJ_Ctrl_RearArm_03_SkinPoint
+    400118: ADJ_Ctrl_RightBrow_L_SkinPoint
+    400120: ADJ_Ctrl_RightBrow_M_SkinPoint
+    400122: ADJ_Ctrl_RightBrow_R_SkinPoint
+    400124: ADJ_Ctrl_RightCableHang_SkinPoint
+    400126: ADJ_Mesh_Backside
+    400128: //RootNode
+    400130: Ref_Center
+    400132: Ref_Head
+    400134: Ref_Origin
+    400136: Ref_Overhead
+    400138: Ref_Target
+    400140: SM_Adjutant_0
+    400142: SM_Adjutant_1
+    400144: SM_Adjutant_10
+    400146: SM_Adjutant_11
+    400148: SM_Adjutant_2
+    400150: SM_Adjutant_3
+    400152: SM_Adjutant_4
+    400154: SM_Adjutant_5
+    400156: SM_Adjutant_6
+    400158: SM_Adjutant_7
+    400160: SM_Adjutant_8
+    400162: SM_Adjutant_9
+    2100000: 'Material #37'
+    2100002: 'Material #36'
+    2100004: 'Material #41'
+    2100006: 'Material #38'
+    4300000: SM_Adjutant_0
+    4300002: SM_Adjutant_1
+    4300004: SM_Adjutant_2
+    4300006: SM_Adjutant_3
+    4300008: SM_Adjutant_4
+    4300010: SM_Adjutant_5
+    4300012: SM_Adjutant_6
+    4300014: SM_Adjutant_7
+    4300016: SM_Adjutant_8
+    4300018: SM_Adjutant_9
+    4300020: SM_Adjutant_10
+    4300022: SM_Adjutant_11
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SM_Adjutant_0
+    13700002: SM_Adjutant_1
+    13700004: SM_Adjutant_10
+    13700006: SM_Adjutant_11
+    13700008: SM_Adjutant_2
+    13700010: SM_Adjutant_3
+    13700012: SM_Adjutant_4
+    13700014: SM_Adjutant_5
+    13700016: SM_Adjutant_6
+    13700018: SM_Adjutant_7
+    13700020: SM_Adjutant_8
+    13700022: SM_Adjutant_9
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'ADJ_Ctrl_Pelvis_SkinPoint' has scale animation
+      that will be discarded.\n\t'ADJ_Ctrl_Arm_R_SkinPoint' has scale animation that
+      will be discarded.\n\t'ADJ_Ctrl_RightCableHang_SkinPoint' has scale animation
+      that will be discarded.\n\t'ADJ_Bone_Cables_RB_02_SkinPoint' has scale animation
+      that will be discarded.\n\t'ADJ_Ctrl_Arm_L_SkinPoint' has scale animation that
+      will be discarded.\n\t'ADJ_Ctrl_LeftCableHang_SkinPoint' has scale animation
+      that will be discarded.\n\t'ADJ_Ctrl_Neck_SkinPoint' has scale animation that
+      will be discarded.\n\t'ADJ_Ctrl_Eye_L_SkinPoint' has scale animation that will
+      be discarded.\n\t'ADJ_Ctrl_Eye_R_SkinPoint' has scale animation that will be
+      discarded.\n\t'ADJ_Ctrl_Jaw_SkinPoint' has scale animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 200
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.02
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: ADJ_Ctrl_Pelvis_SkinPoint
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_BL_04_SkinPoint
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_BM_02_SkinPoint
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_BL_03_SkinPoint
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_BM_01_SkinPoint
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_BL_02_SkinPoint
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_BL_01_SkinPoint
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_LowerBack_SkinPoint
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Chest_SkinPoint
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Neck_SkinPoint
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Head_SkinPoint
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Arm_L_SkinPoint
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Arm_R_SkinPoint
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_LeftCableHang_SkinPoint
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_RightCableHang_SkinPoint
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_L_02_SkinPoint
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_RB_03_SkinPoint
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_L_01_SkinPoint
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Bone_Cables_RB_02_SkinPoint
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Eye_L_SkinPoint
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Eye_R_SkinPoint
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ADJ_Ctrl_Jaw_SkinPoint
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Adjutant(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _M3_Anim_Data
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ref_Origin
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ref_Overhead
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0.021469686, z: -0.0024599456}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_0
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_1
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_2
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_3
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_4
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_5
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_6
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_7
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_8
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_9
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_10
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Adjutant_11
+      parentName: Adjutant(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ADJ_Ctrl_Pelvis_SkinPoint
+      parentName: Adjutant(Clone)
+      position: {x: 5.553465e-10, y: 0.012378668, z: -0.0021661865}
+      rotation: {x: 8.4845444e-17, y: 8.4845444e-17, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1.2999994, y: 1.2999964, z: 1.2999966}
+    - name: ADJ_Mesh_Backside
+      parentName: ADJ_Ctrl_Pelvis_SkinPoint
+      position: {x: 0.014234872, y: -0.000000001486261, z: 0.0016662901}
+      rotation: {x: -0.49999997, y: -0.4999999, z: 0.50000006, w: 0.5000001}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Ref_Center
+      parentName: ADJ_Ctrl_Pelvis_SkinPoint
+      position: {x: 0.00057428714, y: -3.8146963e-10, z: -0.00015636205}
+      rotation: {x: -0.49999997, y: -0.49999988, z: 0.49999997, w: 0.5000002}
+      scale: {x: 0.76923263, y: 0.76923114, z: 0.76923287}
+    - name: ADJ_Bone_Cables_BL_04_SkinPoint
+      parentName: ADJ_Ctrl_Pelvis_SkinPoint
+      position: {x: 0.0018916669, y: -0.0015917002, z: 0.0010327643}
+      rotation: {x: 0.31145304, y: -0.21316592, z: -0.071919374, w: 0.923247}
+      scale: {x: 1.0000013, y: 1.0000002, z: 0.9999991}
+    - name: ADJ_Bone_Cables_BL_03_SkinPoint
+      parentName: ADJ_Bone_Cables_BL_04_SkinPoint
+      position: {x: 0.002086278, y: 0.0003684034, z: -0.0007564545}
+      rotation: {x: -0.4554574, y: 0.11302208, z: 0.1533519, w: 0.8696366}
+      scale: {x: 1.0000013, y: 0.99999875, z: 0.9999997}
+    - name: ADJ_Bone_Cables_BL_02_SkinPoint
+      parentName: ADJ_Bone_Cables_BL_03_SkinPoint
+      position: {x: 0.0017364165, y: 0.00025962282, z: -0.00022451222}
+      rotation: {x: -0.5339287, y: 0.014244092, z: 0.09637454, w: 0.83989835}
+      scale: {x: 1.0000011, y: 1.0000001, z: 0.99999964}
+    - name: ADJ_Bone_Cables_BR_03_SkinPoint
+      parentName: ADJ_Ctrl_Pelvis_SkinPoint
+      position: {x: 0.0018914504, y: 0.0012270601, z: 0.0006979978}
+      rotation: {x: -0.11144051, y: -0.20416854, z: 0.023283485, w: 0.97229326}
+      scale: {x: 1.000001, y: 1, z: 0.999999}
+    - name: ADJ_Bone_Cables_BR_02_SkinPoint
+      parentName: ADJ_Bone_Cables_BR_03_SkinPoint
+      position: {x: 0.0018674599, y: 0.000040871648, z: -0.0014038438}
+      rotation: {x: 0.94771385, y: -0.0034738213, z: -0.31683263, w: -0.03799469}
+      scale: {x: 1.0000014, y: 1.0000002, z: 0.99999917}
+    - name: ADJ_Bone_Cables_BR_01_SkinPoint
+      parentName: ADJ_Bone_Cables_BR_02_SkinPoint
+      position: {x: 0.0028498613, y: -0.0004419312, z: -0.0028149497}
+      rotation: {x: 0.9181565, y: -0.016914189, z: -0.38227424, w: 0.102805935}
+      scale: {x: 1.0000013, y: 0.99999964, z: 0.99999833}
+    - name: ADJ_Bone_BackWires_03_SkinPoint
+      parentName: ADJ_Ctrl_Pelvis_SkinPoint
+      position: {x: 0.0024136198, y: 0.0000004273653, z: -0.0012560338}
+      rotation: {x: 0.98182917, y: -0.000021737467, z: -0.18976705, w: 0.00003028273}
+      scale: {x: 1.0000008, y: 0.99999994, z: 0.9999993}
+    - name: ADJ_Bone_BackWires_02_SkinPoint
+      parentName: ADJ_Bone_BackWires_03_SkinPoint
+      position: {x: 0.0021774373, y: -5.9604643e-10, z: 0.0012833589}
+      rotation: {x: 0.00000029853376, y: -0.2631542, z: -0.000000045816062, w: 0.9647538}
+      scale: {x: 1.0000005, y: 1, z: 0.9999991}
+    - name: ADJ_Bone_BackWires_01_SkinPoint
+      parentName: ADJ_Bone_BackWires_02_SkinPoint
+      position: {x: 0.0028164824, y: 0, z: 0.0025501377}
+      rotation: {x: -0.00000007582927, y: -0.35966054, z: 0.00000016393427, w: 0.93308324}
+      scale: {x: 1.0000013, y: 1.0000004, z: 0.999999}
+    - name: ADJ_Ctrl_LowerBack_SkinPoint
+      parentName: ADJ_Ctrl_Pelvis_SkinPoint
+      position: {x: -0.0003084123, y: 1.4901161e-10, z: -0.000034337045}
+      rotation: {x: -0.00000134862, y: 0.016078705, z: -0.00000033529804, w: 0.9998708}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000006}
+    - name: ADJ_Ctrl_Chest_SkinPoint
+      parentName: ADJ_Ctrl_LowerBack_SkinPoint
+      position: {x: -0.0007328867, y: -2.9802322e-10, z: -0.0000000011920929}
+      rotation: {x: 0.0000012586423, y: -0.16808383, z: -0.00000008345955, w: 0.9857727}
+      scale: {x: 1.0000006, y: 1, z: 0.99999946}
+    - name: Ref_Target
+      parentName: ADJ_Ctrl_Chest_SkinPoint
+      position: {x: -0.00076256157, y: -9.536745e-10, z: 0.000052304415}
+      rotation: {x: -0.41806784, y: -0.4180681, z: 0.5702799, w: 0.57027996}
+      scale: {x: 0.76923245, y: 0.76923114, z: 0.7692327}
+    - name: ADJ_Ctrl_Arm_R_SkinPoint
+      parentName: ADJ_Ctrl_Chest_SkinPoint
+      position: {x: -0.0017080253, y: 0.0010615062, z: -0.00029061912}
+      rotation: {x: -0.4883172, y: 0.8568103, z: 0.10326825, w: -0.12945329}
+      scale: {x: 1.0000014, y: 0.99999785, z: 0.99999964}
+    - name: ADJ_Ctrl_RightCableHang_SkinPoint
+      parentName: ADJ_Ctrl_Arm_R_SkinPoint
+      position: {x: -0.0016965299, y: 0.00048211543, z: -0.00019819617}
+      rotation: {x: 0.63963366, y: 0.34078687, z: 0.36300263, w: 0.58562976}
+      scale: {x: 1.0000023, y: 1.0000001, z: 0.9999986}
+    - name: ADJ_Ctrl_Cables_R_SkinPoint
+      parentName: ADJ_Ctrl_RightCableHang_SkinPoint
+      position: {x: 0.0032278309, y: 0.0006402218, z: -0.00049077155}
+      rotation: {x: 0.014835617, y: 0.70695114, z: -0.014835617, w: 0.70695114}
+      scale: {x: 1.0000015, y: 0.99999946, z: 0.99999803}
+    - name: ADJ_Ctrl_CableAnchor_R_SkinPoint
+      parentName: ADJ_Ctrl_Cables_R_SkinPoint
+      position: {x: 0.00059932173, y: 0.0035424011, z: -0.0021111453}
+      rotation: {x: 0.49999997, y: 0.50000006, z: -0.49999997, w: 0.50000006}
+      scale: {x: 1.000002, y: 0.9999983, z: 1.0000008}
+    - name: ADJ_Bone_Cables_RB_03_SkinPoint
+      parentName: ADJ_Ctrl_RightCableHang_SkinPoint
+      position: {x: -0.0022020896, y: 0.00071291835, z: -0.000848608}
+      rotation: {x: 0.06552242, y: 0.94478244, z: 0.1475606, w: 0.2851648}
+      scale: {x: 1.0000012, y: 0.9999998, z: 0.9999993}
+    - name: ADJ_Bone_Cables_RB_02_SkinPoint
+      parentName: ADJ_Bone_Cables_RB_03_SkinPoint
+      position: {x: 0.0011538737, y: 0.0023776393, z: 0.0005381799}
+      rotation: {x: -0.3148186, y: -0.30395162, z: 0.4401124, w: 0.7840943}
+      scale: {x: 1.0000021, y: 0.9999978, z: 0.9999986}
+    - name: ADJ_Ctrl_Arm_L_SkinPoint
+      parentName: ADJ_Ctrl_Chest_SkinPoint
+      position: {x: -0.0017080264, y: -0.0010615014, z: -0.00029061793}
+      rotation: {x: 0.12945382, y: 0.10326761, z: 0.8568099, w: 0.48831785}
+      scale: {x: 1.0000013, y: 0.99999803, z: 0.9999999}
+    - name: ADJ_Ctrl_LeftCableHang_SkinPoint
+      parentName: ADJ_Ctrl_Arm_L_SkinPoint
+      position: {x: -0.0018919006, y: 0.0002616033, z: -0.000091394184}
+      rotation: {x: -0.63963264, y: -0.3407868, z: 0.36300328, w: 0.5856305}
+      scale: {x: 1.0000015, y: 0.9999995, z: 0.9999985}
+    - name: ADJ_Bone_Cables_L_03_SkinPoint
+      parentName: ADJ_Ctrl_LeftCableHang_SkinPoint
+      position: {x: 0.00044981955, y: -0.00047690896, z: 0.0013859903}
+      rotation: {x: 0.79947317, y: -0.08084052, z: 0.59051657, w: -0.07481826}
+      scale: {x: 1.0000012, y: 1.0000002, z: 0.99999887}
+    - name: ADJ_Bone_Cables_L_02_SkinPoint
+      parentName: ADJ_Bone_Cables_L_03_SkinPoint
+      position: {x: -0.000429641, y: 0.00024284287, z: 0.0018521118}
+      rotation: {x: 0.61208117, y: -0.043573037, z: 0.7811375, w: 0.11524847}
+      scale: {x: 1.0000008, y: 1.0000002, z: 0.99999934}
+    - name: ADJ_Bone_Cables_L_01_SkinPoint
+      parentName: ADJ_Bone_Cables_L_02_SkinPoint
+      position: {x: 0.0026929744, y: 0.0018695238, z: 0.0016970896}
+      rotation: {x: 0.6162641, y: -0.004656301, z: 0.36773282, w: 0.6963975}
+      scale: {x: 1.0000008, y: 0.9999988, z: 1.0000001}
+    - name: ADJ_Ctrl_CableAnchor_L_SkinPoint
+      parentName: ADJ_Bone_Cables_L_01_SkinPoint
+      position: {x: 0.00080177543, y: -0.00095262885, z: -0.0024486803}
+      rotation: {x: -0.26255846, y: -0.00013381813, z: 0.9649161, w: 0.00006292996}
+      scale: {x: 1.0000001, y: 1.0000006, z: 0.99999946}
+    - name: ADJ_Ctrl_Neck_SkinPoint
+      parentName: ADJ_Ctrl_Chest_SkinPoint
+      position: {x: -0.0021151616, y: 0.0000000023841857, z: -0.00010349154}
+      rotation: {x: 0.90635055, y: -0.000006057427, z: -0.42252663, w: -0.000013403289}
+      scale: {x: 1.0000018, y: 0.9999997, z: 0.9999987}
+    - name: ADJ_Ctrl_Head_SkinPoint
+      parentName: ADJ_Ctrl_Neck_SkinPoint
+      position: {x: -0.0007948778, y: 0, z: -0.0000000011920929}
+      rotation: {x: 0.002694053, y: 0.27965, z: -0.0007869697, w: 0.96009797}
+      scale: {x: 1.0000007, y: 1, z: 0.99999875}
+    - name: Ref_Head
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00034194946, y: 0.000000008391217, z: -0.0004893571}
+      rotation: {x: -0.49999604, y: 0.5000042, z: 0.5000038, w: -0.49999604}
+      scale: {x: 0.7692325, y: 0.76923096, z: 0.7692329}
+    - name: ADJ_Ctrl_Eyelid_Lower_R_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00060305314, y: -0.0002935116, z: -0.00082739827}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Eyelid_R_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0006458891, y: -0.0002660589, z: -0.0007090795}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Eyelid_L_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0006458866, y: 0.00025807007, z: -0.0007120347}
+      rotation: {x: 0.50140154, y: -0.49858826, z: 0.50141346, w: -0.4985888}
+      scale: {x: 1.0000023, y: 1, z: 0.9999981}
+    - name: ADJ_Ctrl_Eyelid_Lower_L_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0006030473, y: 0.00028418555, z: -0.0008306551}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Jaw_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00013358131, y: -0.0000018602609, z: -0.00032549142}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Mouth_BL_SkinPoint
+      parentName: ADJ_Ctrl_Jaw_SkinPoint
+      position: {x: -0.00008859071, y: -0.0006500199, z: -0.00007291317}
+      rotation: {x: 0.0006420583, y: -0.0000012881237, z: -0.0000002092516, w: 0.9999998}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: ADJ_Ctrl_Mouth_LB_SkinPoint
+      parentName: ADJ_Ctrl_Jaw_SkinPoint
+      position: {x: -0.0001784222, y: -0.0005519132, z: -0.000080167054}
+      rotation: {x: 0.9999998, y: -0.00000023453906, z: 0.000001169688, w: -0.00064195495}
+      scale: {x: 1.298084, y: 1.2980862, z: 1.298082}
+    - name: ADJ_Ctrl_Mouth_BR_SkinPoint
+      parentName: ADJ_Ctrl_Jaw_SkinPoint
+      position: {x: 0.00008456539, y: -0.0006500199, z: -0.00007290363}
+      rotation: {x: 0.0006420583, y: -0.0000012852583, z: -0.00000020960887, w: 0.9999998}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: ADJ_Ctrl_Mouth_RB_SkinPoint
+      parentName: ADJ_Ctrl_Jaw_SkinPoint
+      position: {x: 0.00017836031, y: -0.00055191264, z: -0.00008016825}
+      rotation: {x: 0.00064204494, y: -0.0000011642016, z: -0.00000020763673, w: 0.9999998}
+      scale: {x: 1.2980837, y: 1.298086, z: 1.2980818}
+    - name: ADJ_Ctrl_Nostril_L_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0005048215, y: 0.00014289528, z: -0.00087356206}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Nostril_R_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00050482, y: -0.00015271618, z: -0.0008718955}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Mouth_LT_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00010004578, y: 0.00020211912, z: -0.0008711278}
+      rotation: {x: 0.5010809, y: -0.49826753, z: 0.5017338, w: -0.49890944}
+      scale: {x: 1.294284, y: 1.2942551, z: 1.2942563}
+    - name: ADJ_Ctrl_Mouth_RT_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00010005347, y: -0.00021192014, z: -0.0008687937}
+      rotation: {x: 0.49890983, y: -0.5017339, z: -0.49826702, w: 0.5010809}
+      scale: {x: 1.2942842, y: 1.2942537, z: 1.2942549}
+    - name: ADJ_Ctrl_Cheek_L_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0004475718, y: 0.00037404627, z: -0.0008078766}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Cheek_R_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0004475795, y: -0.00038311226, z: -0.0008036077}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_LeftBrow_L_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0007158829, y: 0.00039226294, z: -0.0008082747}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_LeftBrow_M_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00077235914, y: 0.00027107605, z: -0.00090987206}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_LeftBrow_R_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0007299822, y: 0.00011928856, z: -0.0009429538}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Mouth_M_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0001525206, y: -0.0000037248433, z: -0.0010132897}
+      rotation: {x: 0.49839002, y: -0.50121677, z: -0.49878648, w: 0.50159866}
+      scale: {x: 1.0000023, y: 0.9999998, z: 0.99999803}
+    - name: ADJ_Ctrl_RightBrow_L_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0007299882, y: -0.0001298879, z: -0.00094154954}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_RightBrow_M_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0007723719, y: -0.0002812916, z: -0.00090676185}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_RightBrow_R_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0007158884, y: -0.00040132686, z: -0.000803802}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Mouth_TR_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00011089835, y: -0.00012066781, z: -0.0009699559}
+      rotation: {x: 0.49839026, y: -0.5012166, z: -0.49878672, w: 0.50159836}
+      scale: {x: 1.0000023, y: 0.9999995, z: 0.999998}
+    - name: ADJ_Ctrl_Mouth_TL_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00011089563, y: 0.00011369817, z: -0.0009712767}
+      rotation: {x: 0.49781814, y: -0.50064754, z: -0.49935797, w: 0.5021661}
+      scale: {x: 1.0000025, y: 0.9999999, z: 0.9999981}
+    - name: ADJ_Ctrl_Eye_L_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0006625746, y: 0.0002592963, z: -0.00071123004}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_Eye_R_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.00066257996, y: -0.00026727765, z: -0.00070826174}
+      rotation: {x: 0.49858853, y: -0.5014132, z: -0.49858853, w: 0.5014018}
+      scale: {x: 1.0000023, y: 0.9999999, z: 0.999998}
+    - name: ADJ_Ctrl_CableAnchor_TR_SkinPoint
+      parentName: ADJ_Ctrl_Head_SkinPoint
+      position: {x: -0.0047325287, y: -0.0013349378, z: 0.0034175275}
+      rotation: {x: 0.99999607, y: -0.0000057743136, z: 0.0000056052904, w: 0.0028189525}
+      scale: {x: 0.99999845, y: 1, z: 1.0000013}
+    - name: ADJ_Ctrl_RearArm_01_SkinPoint
+      parentName: ADJ_Ctrl_Chest_SkinPoint
+      position: {x: -0.001070693, y: -0.00012946934, z: -0.0005143535}
+      rotation: {x: -0.58351946, y: -0.39938235, z: -0.39936137, w: 0.58353174}
+      scale: {x: 1.0000017, y: 0.9999983, z: 1.0000002}
+    - name: ADJ_Ctrl_MechArmCable_F_SkinPoint
+      parentName: ADJ_Ctrl_RearArm_01_SkinPoint
+      position: {x: -0.0019887132, y: 0.00040420232, z: 0.00012948393}
+      rotation: {x: -0.58519346, y: 0.8108937, z: -0.0000059069953, w: -0.0000064108754}
+      scale: {x: 1.0000019, y: 0.9999981, z: 0.99999976}
+    - name: ADJ_Ctrl_RearArm_02_SkinPoint
+      parentName: ADJ_Ctrl_MechArmCable_F_SkinPoint
+      position: {x: 0.00084898726, y: 0.0012743598, z: 0.00012949467}
+      rotation: {x: -0.1411284, y: 0.9899913, z: -0.0000024427793, w: 0.000008283982}
+      scale: {x: 1.0000008, y: 0.9999992, z: 1.0000005}
+    - name: ADJ_Ctrl_MechArmCable_B_SkinPoint
+      parentName: ADJ_Ctrl_RearArm_02_SkinPoint
+      position: {x: -0.0015161012, y: 0.00068137824, z: 0.00012954592}
+      rotation: {x: -0.24607803, y: 0.96925, z: 0.0000006386028, w: -0.000008954616}
+      scale: {x: 1.0000012, y: 0.9999985, z: 0.9999998}
+    - name: ADJ_Ctrl_RearArm_03_SkinPoint
+      parentName: ADJ_Ctrl_MechArmCable_B_SkinPoint
+      position: {x: 0.0026712874, y: 0.000674594, z: 0.00012959003}
+      rotation: {x: -0.4448359, y: 0.8956121, z: 0.000024541501, w: 0.0000612577}
+      scale: {x: 1.0000024, y: 0.99999744, z: 0.9999999}
+    - name: ADJ_Bone_Cables_BM_02_SkinPoint
+      parentName: ADJ_Ctrl_Pelvis_SkinPoint
+      position: {x: 0.0022281616, y: 0.00006257802, z: 0.00009641826}
+      rotation: {x: -0.28416324, y: -0.02460821, z: 0.007296095, w: 0.9584323}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000004}
+    - name: ADJ_Bone_Cables_BM_01_SkinPoint
+      parentName: ADJ_Bone_Cables_BM_02_SkinPoint
+      position: {x: 0.002489128, y: 0.0004470536, z: -0.00094007904}
+      rotation: {x: 0.94895816, y: 0.03711102, z: -0.1932263, w: -0.24650516}
+      scale: {x: 1.0000007, y: 0.9999998, z: 0.99999976}
+    - name: ADJ_Bone_Cables_BL_01_SkinPoint
+      parentName: ADJ_Bone_Cables_BM_01_SkinPoint
+      position: {x: 0.002355261, y: 0.00004783228, z: -0.0016325575}
+      rotation: {x: 0.28605688, y: -0.2343659, z: -0.19697909, w: 0.9079886}
+      scale: {x: 1.0000014, y: 0.99999964, z: 0.999999}
+    - name: ADJ_Ctrl_CableAnchor_B_SkinPoint
+      parentName: ADJ_Bone_Cables_BM_01_SkinPoint
+      position: {x: 0.0023552726, y: 0.00004783198, z: -0.0016325563}
+      rotation: {x: 0.9840441, y: -0.006349663, z: -0.17418629, w: -0.035723403}
+      scale: {x: 1.0000004, y: 0.9999997, z: 0.99999994}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
