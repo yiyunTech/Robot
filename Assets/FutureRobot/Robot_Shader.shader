@@ -40,11 +40,11 @@
 
 			
 			//_Offset = IN.xy_Position.x;
-			float utmp = IN.worldPos.x / 2.0;
-			float vtmp = IN.worldPos.y / 2.0;
+			float utmp = IN.worldPos.x / 1.0;
+			float vtmp = IN.worldPos.y / 1.0;
 
-			float ut = 0.7071 * utmp + 0.7071 * vtmp;
-			float vt = 0.7071 * utmp - 0.7071 * vtmp;
+			float ut = utmp; //0.7071 * utmp + 0.7071 * vtmp;
+			float vt = vtmp;//0.7071 * utmp - 0.7071 * vtmp;
 
 			o.Albedo = _ColorFactor * (0.6 * tex2D(_TexDynamic, float2(ut, vt)).rgb + 0.4 * tex2D(_TexStatic, IN.uv_TexStatic).rgb);
 			//o.Albedo = 0.6 * tex2D(_TexDynamic, float2(IN.uv_TexDynamic.x, IN.uv_TexDynamic.y + _Offset)).rgb + 0.4 * tex2D(_TexStatic, IN.uv_TexStatic).rgb;

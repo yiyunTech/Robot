@@ -15,7 +15,10 @@ using System.Collections.Generic;
 /// </summary>
 public class KinectManager : MonoBehaviour 
 {
-	[Tooltip("How high above the ground is the sensor, in meters.")]
+    public GameObject AssistCamera;
+    public GameObject MainCamera;
+
+    [Tooltip("How high above the ground is the sensor, in meters.")]
 	public float sensorHeight = 1.0f;
 
 	[Tooltip("Kinect elevation angle (in degrees). May be positive or negative.")]
@@ -2287,7 +2290,10 @@ public class KinectManager : MonoBehaviour
 			}
 		}
 
-	}
+        MainCamera.SetActive(true);
+        AssistCamera.SetActive(false);
+
+    }
 
 	private void StartKinect() 
 	{
@@ -2846,10 +2852,14 @@ public class KinectManager : MonoBehaviour
 	}
 
     public Boolean isSwitch = false;
+    //动画切换计时
     private int clock = 0;
+    //场景切换计时
+    private int tclock = 0;
     private System.Random random = new System.Random();
-    private Double slowThreshold = 0.4;
+    private Double slowThreshold = 0.9;
     private Double obeyThreshold = 0.995;
+    private int poseIndex;
 
 	void Update() 
 	{
@@ -2861,45 +2871,65 @@ public class KinectManager : MonoBehaviour
 				UpdateKinectStreams();
 			}
 
-			// process the data from Kinect streams
-			ProcessKinectStreams();
+            // process the data from Kinect streams
+            ProcessKinectStreams();
             clock += 1;
+            tclock += 1;
             if (clock == 300)
             {
                 clock = 0;
                 isSwitch = false;
-                //Debug.Log("transition!");
             }
 
-            //if (isSwitch) return;
-   
+            if (tclock == 15)
+            {
+                tclock = 0;
+                MainCamera.SetActive(true);
+                AssistCamera.SetActive(false);
+            }
+
+            if (isSwitch) return;
+
             double switch_prob = random.NextDouble();
             if (switch_prob > obeyThreshold)
             {
-               
-                //ebug.Log("switch: " + switch_prob);
 
-                isSwitch = true;
+               
                 double slow_prob = random.NextDouble();
-                int idx = random.Next(0, 3);
+                if (!isSwitch)
+                {
+                    poseIndex = random.Next(0, 3);
+                    // 动画切换开始计时tclock
+                    tclock = 0;
+                    MainCamera.SetActive(false);
+                    AssistCamera.SetActive(true);
+                }
+                
+                
                 foreach (AvatarController controller in avatarControllers)
                 {
                     controller.startAnimate();
-                    if (slow_prob > slowThreshold)
+                    // 一个clock周期保持一个动作
+                    if (!isSwitch)
                     {
-                        controller.setAnimateSpeed(0.1f);
-                    }
-                    else
-                    {
-                        controller.setAnimateSpeed(1.0f);
+                        controller.setAnimateSpeed(1);
+                        controller.setAnimatePose(poseIndex);
                     }
 
-                    controller.setAnimatePose(idx);
+
+                    // 暂停效果
+                    if (slow_prob > slowThreshold)
+                    {
+                        controller.setAnimateSpeed(0.25f);
+                    }
+                    
                 }
+                isSwitch = true;
+                return;
             }
             else
             {
-                if (isSwitch) return;
+
                 //Debug.Log("obey!");
                 foreach (AvatarController controller in avatarControllers)
                 {
