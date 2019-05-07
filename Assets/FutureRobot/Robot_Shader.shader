@@ -40,8 +40,11 @@
 
 			
 			//_Offset = IN.xy_Position.x;
-			float utmp = IN.worldPos.x / 1.0;
-			float vtmp = IN.worldPos.y / 1.0;
+			//float utmp = IN.worldPos.x / 1.0;
+			//float vtmp = IN.worldPos.y / 1.0;
+
+			float utmp = IN.uv_TexDynamic.x;
+			float vtmp = IN.uv_TexDynamic.y;
 
 			float ut = utmp; //0.7071 * utmp + 0.7071 * vtmp;
 			float vt = vtmp;//0.7071 * utmp - 0.7071 * vtmp;

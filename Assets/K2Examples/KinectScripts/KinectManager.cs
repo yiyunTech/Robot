@@ -2857,8 +2857,8 @@ public class KinectManager : MonoBehaviour
     //³¡¾°ÇÐ»»¼ÆÊ±
     private int tclock = 0;
     private System.Random random = new System.Random();
-    private Double slowThreshold = 0.9;
-    private Double obeyThreshold = 0.995;
+    private Double slowThreshold = 1;
+    private Double obeyThreshold = 1;
     private int poseIndex;
 
 	void Update() 
