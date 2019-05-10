@@ -22,7 +22,7 @@ public class RandomOffset : MonoBehaviour {
         CurOffset2 = (float)CurRand.NextDouble();
 
 
-        GetComponent<Renderer>().material.mainTextureOffset = new Vector2(CurOffset1, CurOffset2);
+        //GetComponent<Renderer>().material.mainTextureOffset = new Vector2(CurOffset1, CurOffset2);
 
     }
 }
