@@ -1,12 +1,17 @@
 ﻿
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+//using DG.Tweening;
+
+
 [ExecuteInEditMode]
 public class UniformColor : MonoBehaviour
 {
     #region Variables
     public Shader curShader;
     public float grayScaleAmount = 1.0f;
+    public float contrastRatio = 1.0f;
     public Vector3 ConsistentColor = new Vector3(1.0f, 1.0f, 1.0f);
     public float Lumin = 1.0f;
     private Material curMaterial;
@@ -27,7 +32,10 @@ public class UniformColor : MonoBehaviour
     }
     #endregion
 
-    // Use this for initialization
+
+   
+
+
     void Start()
     {
         if (SystemInfo.supportsImageEffects == false)
@@ -48,8 +56,14 @@ public class UniformColor : MonoBehaviour
     {
         if (curShader != null)
         {
+           
+
+
+            // uniform color
+
             material.SetFloat("_LuminosityAmount", grayScaleAmount);
             material.SetFloat("_Luminance", Lumin);
+            material.SetFloat("_ContrastRatio", contrastRatio);
 
 
             material.SetFloat("_ConsistentColorR", ConsistentColor.x);
@@ -57,6 +71,10 @@ public class UniformColor : MonoBehaviour
             material.SetFloat("_ConsistentColorB", ConsistentColor.z);
 
             Graphics.Blit(sourceTexture, destTexture, material);
+
+
+            
+
         }
         else
         {

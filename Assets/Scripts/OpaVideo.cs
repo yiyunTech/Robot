@@ -15,7 +15,7 @@ public class OpaVideo : MonoBehaviour {
     public float displayTime = 3.0f;
     float _durationTime = 0.0f;
     public float waitTime = 3.0f;
-    bool _isDisplay = false;
+    public bool _isDisplay = false;
 
     float _totalAlpha = 0.0f;
 
@@ -72,6 +72,7 @@ public class OpaVideo : MonoBehaviour {
     void Update()
     {
         _updateVideoState();
+        //_videoPlay();
 
         float CurOffset1 = 0f;
         float CurOffset2 = 0f;
