@@ -3,3 +3,4 @@ Temp/
 *.log
 Output/
 Library/
+obj/Debug/*.cache

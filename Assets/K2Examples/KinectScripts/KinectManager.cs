@@ -15,7 +15,7 @@ using System.Collections.Generic;
 /// </summary>
 public class KinectManager : MonoBehaviour 
 {
-    public GameObject AssistCamera;
+    //public GameObject AssistCamera;
     public GameObject MainCamera;
 
     [Tooltip("How high above the ground is the sensor, in meters.")]
@@ -2291,7 +2291,6 @@ public class KinectManager : MonoBehaviour
 		}
 
         MainCamera.SetActive(true);
-        AssistCamera.SetActive(false);
 
     }
 
@@ -2857,7 +2856,7 @@ public class KinectManager : MonoBehaviour
     //场景切换计时
     private int tclock = 0;
     private System.Random random = new System.Random();
-    private Double slowThreshold = 1;
+    private Double slowThreshold = 0.9;
     private Double obeyThreshold = 1;
     private int poseIndex;
 
@@ -2881,13 +2880,6 @@ public class KinectManager : MonoBehaviour
                 isSwitch = false;
             }
 
-            if (tclock == 15)
-            {
-                tclock = 0;
-                MainCamera.SetActive(true);
-                AssistCamera.SetActive(false);
-            }
-
             if (isSwitch) return;
 
             double switch_prob = random.NextDouble();
@@ -2900,9 +2892,9 @@ public class KinectManager : MonoBehaviour
                 {
                     poseIndex = random.Next(0, 3);
                     // 动画切换开始计时tclock
-                    tclock = 0;
-                    MainCamera.SetActive(false);
-                    AssistCamera.SetActive(true);
+                    //tclock = 0;
+                    //MainCamera.SetActive(false);
+                    //AssistCamera.SetActive(true);
                 }
                 
                 
