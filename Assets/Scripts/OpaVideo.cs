@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class OpaVideo : MonoBehaviour {
+public class OpaVideo : MonoBehaviour
+{
 
-    
+
 
     System.Random CurRand;
 
@@ -17,6 +18,12 @@ public class OpaVideo : MonoBehaviour {
     public float waitTime = 3.0f;
     public bool _isDisplay = false;
 
+    public int CurVideo = 0;
+    public List<VideoClip> AllVideoCilps;
+    public float[] Threshold;
+    //public bool[] 
+
+
     float _totalAlpha = 0.0f;
 
 
@@ -26,7 +33,7 @@ public class OpaVideo : MonoBehaviour {
         CurRand = new System.Random();
 
         _videoPlayer = this.GetComponent<VideoPlayer>();
-        _videoPlayer.Play();
+        //_videoPlayer[CurVideo].Play();
     }
 
     void _videoPlay()
@@ -35,8 +42,15 @@ public class OpaVideo : MonoBehaviour {
 
         _durationTime = 0.0f;
 
+        CurVideo = CurRand.Next(0, 1);
+        _videoPlayer.clip = AllVideoCilps[CurVideo];
+
         _videoPlayer.Play();
         _totalAlpha = 1.0f;
+
+        GetComponent<Renderer>().material.SetFloat("_Threshold", Threshold[CurVideo]);
+        GetComponent<Renderer>().material.SetInt("_CaseIdx", CurVideo);
+
     }
 
     void _videoStop()
@@ -52,16 +66,16 @@ public class OpaVideo : MonoBehaviour {
     {
         _durationTime += Time.deltaTime;
 
-        if(_isDisplay)
+        if (_isDisplay)
         {
-            if(_durationTime>displayTime)
+            if (_durationTime > displayTime)
             {
                 _videoStop();
             }
         }
         else
         {
-            if(_durationTime>waitTime)
+            if (_durationTime > waitTime)
             {
                 _videoPlay();
             }
