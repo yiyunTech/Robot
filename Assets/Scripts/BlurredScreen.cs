@@ -98,11 +98,14 @@ public class BlurredScreen : MonoBehaviour
 
         CurVideo = CurRand.Next(0, 3);
 
-        //CurVideo = 0;
+        //CurVideo = 2;
 
         _videoPlayer.clip = AllVideoCilps[CurVideo];
 
-        _videoPlayer.Play();
+        if(CurVideo!=2)
+        { 
+            _videoPlayer.Play();
+        }
         _totalAlpha = 1.0f;
 
         material.SetFloat("_Threshold", Threshold[CurVideo]);
@@ -117,7 +120,10 @@ public class BlurredScreen : MonoBehaviour
         _isDisplay = false;
         _durationTime = 0.0f;
 
-        _videoPlayer.Stop();
+        //if (CurVideo != 2)
+        {
+            _videoPlayer.Stop();
+        }
         _totalAlpha = 0.0f;
     }
 
@@ -199,6 +205,7 @@ public class BlurredScreen : MonoBehaviour
         }
         else
         {
+            TestTag = 0;
             Graphics.Blit(sourceTexture, destTexture);
         }
 

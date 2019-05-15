@@ -110,6 +110,7 @@
 					if((s.r +s.g + s.b)> _Threshold)
 					{
 		   				o.xyz = float3(0.0,0.0,0.0);
+						
 					}
 					
 				}
@@ -128,7 +129,7 @@
 				}
 				else if(_CaseIdx==2)
 				{
-					fixed4 s = tex2D (_SnowTex, uv);  
+					//fixed4 s = tex2D (_SnowTex, uv);  
 					//o.Albedo = s.rgb;
 					//o.Albedo = c.rgb;
 					//o.Albedo = float3(0.0,0.0,0.0);
