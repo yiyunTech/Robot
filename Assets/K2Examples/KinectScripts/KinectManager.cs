@@ -2857,7 +2857,7 @@ public class KinectManager : MonoBehaviour
     private int tclock = 0;
     private System.Random random = new System.Random();
     private Double slowThreshold = 0.9;
-    private Double obeyThreshold = 1;
+    private Double obeyThreshold = 0.995;
     private int poseIndex;
 
 	void Update() 
@@ -2873,8 +2873,8 @@ public class KinectManager : MonoBehaviour
             // process the data from Kinect streams
             ProcessKinectStreams();
             clock += 1;
-            tclock += 1;
-            if (clock == 300)
+            //tclock += 1;
+            if (clock == 200)
             {
                 clock = 0;
                 isSwitch = false;
@@ -2890,7 +2890,7 @@ public class KinectManager : MonoBehaviour
                 double slow_prob = random.NextDouble();
                 if (!isSwitch)
                 {
-                    poseIndex = random.Next(0, 3);
+                    poseIndex = random.Next(0, 4);
                     // 动画切换开始计时tclock
                     //tclock = 0;
                     //MainCamera.SetActive(false);

@@ -404,10 +404,19 @@ public class AvatarController : MonoBehaviour
 			initialHipsRotation = humanPose.bodyRotation;
 		}
 	}
+    private List<string> animations = new List<string>()
+        {
+            "look",
+            "jazz",
+            "headbutt",
+            "catch",
+            "hurt"
+        };
 
     public void setAnimatePose(int id)
     {
-        animatorComponent.SetInteger("Pose_Type", id);
+        //animatorComponent.SetInteger("Pose_Type", id);
+        animatorComponent.SetTrigger(animations[id]);
     }
 
     public void startAnimate()
