@@ -19,12 +19,11 @@ public class RobotController : MonoBehaviour {
     void Start () {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        Application.targetFrameRate = 30;
-        Debug.Log("rate: " + Application.targetFrameRate);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+       
         if (Input.GetKey(KeyCode.A))
         {
             moveDir = new Vector3(1.0f, 0.0f, 0.0f);
@@ -51,29 +50,55 @@ public class RobotController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Alpha0))
         {
-            anim.SetInteger("Pose_Type", 0);
+            //anim.SetInteger("Pose_Type", 0);
+            anim.SetTrigger("look");
         }
 
         else if (Input.GetKey(KeyCode.Alpha1))
         {
-            anim.SetInteger("Pose_Type", 1);
+            //anim.SetInteger("Pose_Type", 1);
+            anim.SetTrigger("jazz");
         }
 
         else if (Input.GetKey(KeyCode.Alpha2))
         {
-            anim.SetInteger("Pose_Type", 2);
+            //anim.SetInteger("Pose_Type", 2);
+            anim.SetTrigger("headbutt");
         }
 
         else if (Input.GetKey(KeyCode.Alpha3))
         {
-            anim.SetInteger("Pose_Type", 3);
+            //anim.SetInteger("Pose_Type", 3);
+            anim.SetTrigger("hurt");
         }
 
-        else if (Input.GetKey(KeyCode.Alpha9))
+        else if (Input.GetKey(KeyCode.Alpha4))
+        {
+            //anim.SetInteger("Pose_Type", 3);
+            anim.SetTrigger("walk");
+        }
+
+        else if (Input.GetKey(KeyCode.Alpha5))
+        {
+            //anim.SetInteger("Pose_Type", 3);
+            anim.SetTrigger("catch");
+        }
+
+        else if (Input.GetKey(KeyCode.Alpha6))
+        {
+            //anim.SetInteger("Pose_Type", 3);
+            anim.SetTrigger("blow");
+        }
+        else if (Input.GetKey(KeyCode.Alpha7))
+        {
+            //anim.SetInteger("Pose_Type", 3);
+            anim.SetTrigger("roll");
+        }
+        else if (Input.GetKey(KeyCode.Alpha8))
         {
             //anim.SetInteger("Pose_Type", 9);
             anim.enabled = false;
-        }else if (Input.GetKey(KeyCode.Alpha4))
+        }else if (Input.GetKey(KeyCode.Alpha9))
         {
             anim.enabled = true;
         }

@@ -328,7 +328,11 @@
     <Compile Include="Assets\K2Examples\Standard Assets\Windows\Kinect\TrackingConfidence.cs" />
     <Compile Include="Assets\K2Examples\Standard Assets\Windows\Kinect\TrackingState.cs" />
     <Compile Include="Assets\K2Examples\Standard Assets\Windows\Kinect\Vector4.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\BlurredScreen.cs" />
+=======
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+>>>>>>> dev
     <Compile Include="Assets\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\OpaVideo.cs" />
     <Compile Include="Assets\Scripts\RandomOffset.cs" />
