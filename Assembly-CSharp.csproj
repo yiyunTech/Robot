@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DynamicWall.cs" />
-    <Compile Include="Assets\FutureRobot\Dynamic_Robot_Tex.cs" />
     <Compile Include="Assets\K2Examples\KinectDemos\AvatarsDemo\Scripts\CameraPitchCorrector.cs" />
     <Compile Include="Assets\K2Examples\KinectDemos\AvatarsDemo\Scripts\OffsetNodeMover.cs" />
     <Compile Include="Assets\K2Examples\KinectDemos\AvatarsDemo\Scripts\UserAvatarMatcher.cs" />
@@ -331,6 +330,7 @@
     <Compile Include="Assets\Scripts\BlurredScreen.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraSwitch.cs" />
+    <Compile Include="Assets\Scripts\Dynamic_Robot_Tex.cs" />
     <Compile Include="Assets\Scripts\OpaVideo.cs" />
     <Compile Include="Assets\Scripts\RandomOffset.cs" />
     <Compile Include="Assets\Scripts\RobotController.cs" />
@@ -343,7 +343,7 @@
     <None Include="Assets\K2Examples\Resources\MedianShader.shader" />
     <None Include="Assets\Scripts\UniformColorBack.shader" />
     <None Include="Assets\Scripts\BlurredScreen.shader" />
-    <None Include="Assets\FutureRobot\Robot_Shader.shader" />
+    <None Include="Assets\Scripts\Robot_Shader.shader" />
     <None Include="Assets\K2Examples\Resources\Gradient.shader" />
     <None Include="Assets\K2Examples\Resources\DepthShader.shader" />
     <None Include="Assets\K2Examples\Resources\Body2DepthShader.shader" />
