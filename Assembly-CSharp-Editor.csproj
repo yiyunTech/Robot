@@ -102,9 +102,6 @@
     <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeLightEditor.cs" />
     <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeRendererEditor.cs" />
     <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeScreenEditor.cs" />
-    <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Editor\Trackball.shader" />
-    <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
-    <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Editor\CurveGrid.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>H:/Projects/Robot/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -743,14 +740,6 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{E7A24A7F-1C0A-CD74-A8B0-B26137CF313C}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{093C2AB4-B6FC-E958-7EA3-6DE54FFDF822}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{2DAE2BF2-6753-DAA0-9D3D-CCCE983ED791}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
