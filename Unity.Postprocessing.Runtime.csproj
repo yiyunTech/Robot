@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4C688CE0-459D-A95E-E510-9F2C42D7ABAA}</ProjectGuid>
+    <ProjectGuid>{2DAE2BF2-6753-DAA0-9D3D-CCCE983ED791}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <AssemblyName>Unity.Postprocessing.Runtime</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2018.2.14f1</UnityVersion>
   </PropertyGroup>
@@ -60,63 +60,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\K2Examples\Standard Assets\Editor\KinectCopyPluginDataHelper.cs" />
-    <Compile Include="Assets\K2Examples\Standard Assets\Editor\KinectFacePostBuildCopyPluginData.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\BloomModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\BuiltinDebugViewsEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\ChromaticAberrationEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\DitheringModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\FogModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\GrainModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\ScreenSpaceReflectionModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Monitors\HistogramMonitor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Monitors\WaveformMonitor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PostProcessingFactory.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PostProcessingInspector.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PostProcessingModelEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PostProcessingMonitor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Utils\CurveEditor.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Utils\EditorResources.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
-    <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
-    <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeDataEditor.cs" />
-    <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeDirectionalLightEditor.cs" />
-    <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeEditor.cs" />
-    <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeLightEditor.cs" />
-    <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeRendererEditor.cs" />
-    <Compile Include="Assets\RES\FogVolume\Scripts\Editor\FogVolumeScreenEditor.cs" />
-    <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Editor\Trackball.shader" />
-    <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
-    <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Editor\CurveGrid.shader" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>H:/Projects/Robot/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>H:/Projects/Robot/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>H:/Projects/Robot/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>H:/Projects/Robot/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Attributes\DisplayNameAttribute.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Attributes\MaxAttribute.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Attributes\MinMaxAttribute.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Attributes\PostProcessAttribute.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\AmbientOcclusion.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\AutoExposure.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\Bloom.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\ChromaticAberration.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\ColorGrading.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\DepthOfField.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\Dithering.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\FastApproximateAntialiasing.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\Fog.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\Grain.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\LensDistortion.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\MotionBlur.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\MultiScaleVO.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\ScalableAO.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\ScreenSpaceReflections.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\SubpixelMorphologicalAntialiasing.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\TemporalAntialiasing.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Effects\Vignette.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Monitors\HistogramMonitor.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Monitors\LightMeterMonitor.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Monitors\Monitor.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Monitors\VectorscopeMonitor.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Monitors\WaveformMonitor.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\ParameterOverride.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessBundle.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessDebug.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessDebugLayer.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessEffectRenderer.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessEffectSettings.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessEvent.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessLayer.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessManager.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessProfile.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessRenderContext.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessResources.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\PostProcessVolume.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\ColorUtilities.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\HableCurve.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\HaltonSeq.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\LogHistogram.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\MeshUtilities.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\PropertySheet.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\PropertySheetFactory.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\RuntimeUtilities.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\ShaderIDs.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\Spline.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\TargetPool.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\TextureLerper.cs" />
+    <Compile Include="Assets\PostProcessing-2\PostProcessing\Runtime\Utils\XRSettings.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -213,9 +212,6 @@
     <Reference Include="UnityEngine.SharedInternalsModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SpatialTrackingModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
@@ -305,15 +301,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.TestRunner">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
@@ -738,20 +725,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{E7A24A7F-1C0A-CD74-A8B0-B26137CF313C}</Project>
-      <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{093C2AB4-B6FC-E958-7EA3-6DE54FFDF822}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{2DAE2BF2-6753-DAA0-9D3D-CCCE983ED791}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
