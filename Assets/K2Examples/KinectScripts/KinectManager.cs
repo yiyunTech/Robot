@@ -2860,7 +2860,7 @@ public class KinectManager : MonoBehaviour
         down = true;
     }
 
-    //»úÆ÷ÈËÏà¹Ø²ÎÊý
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½
     public GameObject robot;
     Animator anim;
     Vector3 origin;
@@ -2872,10 +2872,10 @@ public class KinectManager : MonoBehaviour
 
     private bool animated = true;
     public Boolean isSwitch = false;
-    //¶¯»­ÇÐ»»¼ÆÊ±
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ê±
     private int clock = 0;
     private int clockcycle = 200;
-    //³¡¾°ÇÐ»»¼ÆÊ±
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ê±
     private int tclock = 0;
     private System.Random random = new System.Random();
     private Double slowThreshold = 0.9;
@@ -2895,7 +2895,7 @@ public class KinectManager : MonoBehaviour
             // process the data from Kinect streams
             ProcessKinectStreams();
 
-            // Èç¹ûÃ»ÈËÊ±£¬»Øµ½Ðü¿Õ×´Ì¬
+            // ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
             if (alUserIds.Count == 0)
             {
                 anim.enabled = true;
@@ -2912,7 +2912,7 @@ public class KinectManager : MonoBehaviour
                 
             }else if (!hasUser && alUserIds.Count > 0)
             {
-                // ÓÐÈË£¬ÌøÈëÊÓÒ°
+                // ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò°
                 Debug.Log("found user");
                 //hasUser = true;
                 //down = true;
@@ -2942,7 +2942,7 @@ public class KinectManager : MonoBehaviour
 
             //}
 
-            // ÅÐ¶ÏÊÇ·ñ½øÈëÊÓÒ°
+            // ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò°
             //if (anim.GetCurrentAnimatorStateInfo(0).IsName("air") || anim.GetCurrentAnimatorStateInfo(0).IsName("jump"))
             //{
                 
@@ -2968,7 +2968,7 @@ public class KinectManager : MonoBehaviour
                 if (!isSwitch)
                 {
                     poseIndex = random.Next(0, 4);
-                    // ¶¯»­ÇÐ»»¿ªÊ¼¼ÆÊ±tclock
+                    // ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ê±tclock
                     //tclock = 0;
                     //MainCamera.SetActive(false);
                     //AssistCamera.SetActive(true);
@@ -2978,13 +2978,13 @@ public class KinectManager : MonoBehaviour
                 foreach (AvatarController controller in avatarControllers)
                 {
                     controller.startAnimate();
-                    // Ò»¸öclockÖÜÆÚ±£³ÖÒ»¸ö¶¯×÷
+                    // Ò»ï¿½ï¿½clockï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     if (!isSwitch)
                     {
                         controller.setAnimateSpeed(1);
                         controller.setAnimatePose(poseIndex);
                     }
-                    //// ÔÝÍ£Ð§¹û
+                    //// ï¿½ï¿½Í£Ð§ï¿½ï¿½
                     //if (slow_prob > slowThreshold)
                     //{
                     //    controller.setAnimateSpeed(0.25f);
