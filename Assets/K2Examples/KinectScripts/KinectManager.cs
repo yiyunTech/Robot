@@ -2899,17 +2899,14 @@ public class KinectManager : MonoBehaviour
             if (alUserIds.Count == 0)
             {
                 anim.enabled = true;
-
-
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-                {
-                    anim.ResetTrigger("jump");
-                    anim.SetTrigger("air");
-                    gameObject.transform.position = origin;
-                    gameObject.transform.rotation = rotation;
-                    hasUser = false;
-                }
-                
+                //if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                //{
+                //    anim.ResetTrigger("jump");
+                //    anim.SetTrigger("air");
+                gameObject.transform.position = origin;
+                gameObject.transform.rotation = rotation;
+                //    hasUser = false;
+                //}              
                 //Debug.Log("No user");
                 return;
                 
@@ -2917,43 +2914,38 @@ public class KinectManager : MonoBehaviour
             {
                 // 有人，跳入视野
                 Debug.Log("found user");
-                hasUser = true;
-                down = true;
-                anim.ResetTrigger("air");
-                anim.SetTrigger("jump");
+                //hasUser = true;
+                //down = true;
+                //anim.ResetTrigger("air");
+                //anim.SetTrigger("jump");
             }
 
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("jump") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8)
-            {
-                RaycastHit hit;
-                int layerMask = 1 << 8;
-                layerMask = ~layerMask;
-                if (Physics.Raycast(robot.transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
-                {
-                    //Debug.Log(hit.distance);
-                    if (hit.distance < landingDistance)
-                    {
-                        robot.transform.rotation = Quaternion.Euler(0, 180 - MainCamera.transform.eulerAngles.y, 0);
-                    }
-                    else
-                    {
-                        robot.transform.position += Vector3.down * Time.deltaTime;
-                        robot.transform.position += Vector3.right * Time.deltaTime;
-                    }
-                }
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsName("jump") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8)
+            //{
+            //    RaycastHit hit;
+            //    int layerMask = 1 << 8;
+            //    layerMask = ~layerMask;
+            //    if (Physics.Raycast(robot.transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
+            //    {
+            //        //Debug.Log(hit.distance);
+            //        if (hit.distance < landingDistance)
+            //        {
+            //            robot.transform.rotation = Quaternion.Euler(0, 180 - MainCamera.transform.eulerAngles.y, 0);
+            //        }
+            //        else
+            //        {
+            //            robot.transform.position += Vector3.down * Time.deltaTime;
+            //            robot.transform.position += Vector3.right * Time.deltaTime;
+            //        }
+            //    }
 
 
-            }
+            //}
 
             // 判断是否进入视野
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("air") || anim.GetCurrentAnimatorStateInfo(0).IsName("jump"))
-            {
-                
-                return;
-            }
-
-            //if (animated)
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsName("air") || anim.GetCurrentAnimatorStateInfo(0).IsName("jump"))
             //{
+                
             //    return;
             //}
 
