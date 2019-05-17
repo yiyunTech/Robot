@@ -88,7 +88,7 @@ Material:
     - _MusicScalex: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Range: 0.09
+    - _Range: 0.228
     - _SmoothnessTextureChannel: 0
     - _SnowOffsetx: 0
     - _SnowOffsety: 0

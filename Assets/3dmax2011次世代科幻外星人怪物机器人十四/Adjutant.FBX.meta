@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: 012fcb88b4dbdbd4f92fe8b1db5dc9ec
+timeCreated: 1557764410
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: _M3_Anim_Data
+    100002: ADJ_Bone_BackWires_01_SkinPoint
+    100004: ADJ_Bone_BackWires_02_SkinPoint
+    100006: ADJ_Bone_BackWires_03_SkinPoint
+    100008: ADJ_Bone_Cables_BL_01_SkinPoint
+    100010: ADJ_Bone_Cables_BL_02_SkinPoint
+    100012: ADJ_Bone_Cables_BL_03_SkinPoint
+    100014: ADJ_Bone_Cables_BL_04_SkinPoint
+    100016: ADJ_Bone_Cables_BM_01_SkinPoint
+    100018: ADJ_Bone_Cables_BM_02_SkinPoint
+    100020: ADJ_Bone_Cables_BR_01_SkinPoint
+    100022: ADJ_Bone_Cables_BR_02_SkinPoint
+    100024: ADJ_Bone_Cables_BR_03_SkinPoint
+    100026: ADJ_Bone_Cables_L_01_SkinPoint
+    100028: ADJ_Bone_Cables_L_02_SkinPoint
+    100030: ADJ_Bone_Cables_L_03_SkinPoint
+    100032: ADJ_Bone_Cables_RB_02_SkinPoint
+    100034: ADJ_Bone_Cables_RB_03_SkinPoint
+    100036: ADJ_Ctrl_Arm_L_SkinPoint
+    100038: ADJ_Ctrl_Arm_R_SkinPoint
+    100040: ADJ_Ctrl_CableAnchor_B_SkinPoint
+    100042: ADJ_Ctrl_CableAnchor_L_SkinPoint
+    100044: ADJ_Ctrl_CableAnchor_R_SkinPoint
+    100046: ADJ_Ctrl_CableAnchor_TR_SkinPoint
+    100048: ADJ_Ctrl_Cables_R_SkinPoint
+    100050: ADJ_Ctrl_Cheek_L_SkinPoint
+    100052: ADJ_Ctrl_Cheek_R_SkinPoint
+    100054: ADJ_Ctrl_Chest_SkinPoint
+    100056: ADJ_Ctrl_Eye_L_SkinPoint
+    100058: ADJ_Ctrl_Eye_R_SkinPoint
+    100060: ADJ_Ctrl_Eyelid_L_SkinPoint
+    100062: ADJ_Ctrl_Eyelid_Lower_L_SkinPoint
+    100064: ADJ_Ctrl_Eyelid_Lower_R_SkinPoint
+    100066: ADJ_Ctrl_Eyelid_R_SkinPoint
+    100068: ADJ_Ctrl_Head_SkinPoint
+    100070: ADJ_Ctrl_Jaw_SkinPoint
+    100072: ADJ_Ctrl_LeftBrow_L_SkinPoint
+    100074: ADJ_Ctrl_LeftBrow_M_SkinPoint
+    100076: ADJ_Ctrl_LeftBrow_R_SkinPoint
+    100078: ADJ_Ctrl_LeftCableHang_SkinPoint
+    100080: ADJ_Ctrl_LowerBack_SkinPoint
+    100082: ADJ_Ctrl_MechArmCable_B_SkinPoint
+    100084: ADJ_Ctrl_MechArmCable_F_SkinPoint
+    100086: ADJ_Ctrl_Mouth_BL_SkinPoint
+    100088: ADJ_Ctrl_Mouth_BR_SkinPoint
+    100090: ADJ_Ctrl_Mouth_LB_SkinPoint
+    100092: ADJ_Ctrl_Mouth_LT_SkinPoint
+    100094: ADJ_Ctrl_Mouth_M_SkinPoint
+    100096: ADJ_Ctrl_Mouth_RB_SkinPoint
+    100098: ADJ_Ctrl_Mouth_RT_SkinPoint
+    100100: ADJ_Ctrl_Mouth_TL_SkinPoint
+    100102: ADJ_Ctrl_Mouth_TR_SkinPoint
+    100104: ADJ_Ctrl_Neck_SkinPoint
+    100106: ADJ_Ctrl_Nostril_L_SkinPoint
+    100108: ADJ_Ctrl_Nostril_R_SkinPoint
+    100110: ADJ_Ctrl_Pelvis_SkinPoint
+    100112: ADJ_Ctrl_RearArm_01_SkinPoint
+    100114: ADJ_Ctrl_RearArm_02_SkinPoint
+    100116: ADJ_Ctrl_RearArm_03_SkinPoint
+    100118: ADJ_Ctrl_RightBrow_L_SkinPoint
+    100120: ADJ_Ctrl_RightBrow_M_SkinPoint
+    100122: ADJ_Ctrl_RightBrow_R_SkinPoint
+    100124: ADJ_Ctrl_RightCableHang_SkinPoint
+    100126: ADJ_Mesh_Backside
+    100128: //RootNode
+    100130: Ref_Center
+    100132: Ref_Head
+    100134: Ref_Origin
+    100136: Ref_Overhead
+    100138: Ref_Target
+    100140: SM_Adjutant_0
+    100142: SM_Adjutant_1
+    100144: SM_Adjutant_10
+    100146: SM_Adjutant_11
+    100148: SM_Adjutant_2
+    100150: SM_Adjutant_3
+    100152: SM_Adjutant_4
+    100154: SM_Adjutant_5
+    100156: SM_Adjutant_6
+    100158: SM_Adjutant_7
+    100160: SM_Adjutant_8
+    100162: SM_Adjutant_9
+    400000: _M3_Anim_Data
+    400002: ADJ_Bone_BackWires_01_SkinPoint
+    400004: ADJ_Bone_BackWires_02_SkinPoint
+    400006: ADJ_Bone_BackWires_03_SkinPoint
+    400008: ADJ_Bone_Cables_BL_01_SkinPoint
+    400010: ADJ_Bone_Cables_BL_02_SkinPoint
+    400012: ADJ_Bone_Cables_BL_03_SkinPoint
+    400014: ADJ_Bone_Cables_BL_04_SkinPoint
+    400016: ADJ_Bone_Cables_BM_01_SkinPoint
+    400018: ADJ_Bone_Cables_BM_02_SkinPoint
+    400020: ADJ_Bone_Cables_BR_01_SkinPoint
+    400022: ADJ_Bone_Cables_BR_02_SkinPoint
+    400024: ADJ_Bone_Cables_BR_03_SkinPoint
+    400026: ADJ_Bone_Cables_L_01_SkinPoint
+    400028: ADJ_Bone_Cables_L_02_SkinPoint
+    400030: ADJ_Bone_Cables_L_03_SkinPoint
+    400032: ADJ_Bone_Cables_RB_02_SkinPoint
+    400034: ADJ_Bone_Cables_RB_03_SkinPoint
+    400036: ADJ_Ctrl_Arm_L_SkinPoint
+    400038: ADJ_Ctrl_Arm_R_SkinPoint
+    400040: ADJ_Ctrl_CableAnchor_B_SkinPoint
+    400042: ADJ_Ctrl_CableAnchor_L_SkinPoint
+    400044: ADJ_Ctrl_CableAnchor_R_SkinPoint
+    400046: ADJ_Ctrl_CableAnchor_TR_SkinPoint
+    400048: ADJ_Ctrl_Cables_R_SkinPoint
+    400050: ADJ_Ctrl_Cheek_L_SkinPoint
+    400052: ADJ_Ctrl_Cheek_R_SkinPoint
+    400054: ADJ_Ctrl_Chest_SkinPoint
+    400056: ADJ_Ctrl_Eye_L_SkinPoint
+    400058: ADJ_Ctrl_Eye_R_SkinPoint
+    400060: ADJ_Ctrl_Eyelid_L_SkinPoint
+    400062: ADJ_Ctrl_Eyelid_Lower_L_SkinPoint
+    400064: ADJ_Ctrl_Eyelid_Lower_R_SkinPoint
+    400066: ADJ_Ctrl_Eyelid_R_SkinPoint
+    400068: ADJ_Ctrl_Head_SkinPoint
+    400070: ADJ_Ctrl_Jaw_SkinPoint
+    400072: ADJ_Ctrl_LeftBrow_L_SkinPoint
+    400074: ADJ_Ctrl_LeftBrow_M_SkinPoint
+    400076: ADJ_Ctrl_LeftBrow_R_SkinPoint
+    400078: ADJ_Ctrl_LeftCableHang_SkinPoint
+    400080: ADJ_Ctrl_LowerBack_SkinPoint
+    400082: ADJ_Ctrl_MechArmCable_B_SkinPoint
+    400084: ADJ_Ctrl_MechArmCable_F_SkinPoint
+    400086: ADJ_Ctrl_Mouth_BL_SkinPoint
+    400088: ADJ_Ctrl_Mouth_BR_SkinPoint
+    400090: ADJ_Ctrl_Mouth_LB_SkinPoint
+    400092: ADJ_Ctrl_Mouth_LT_SkinPoint
+    400094: ADJ_Ctrl_Mouth_M_SkinPoint
+    400096: ADJ_Ctrl_Mouth_RB_SkinPoint
+    400098: ADJ_Ctrl_Mouth_RT_SkinPoint
+    400100: ADJ_Ctrl_Mouth_TL_SkinPoint
+    400102: ADJ_Ctrl_Mouth_TR_SkinPoint
+    400104: ADJ_Ctrl_Neck_SkinPoint
+    400106: ADJ_Ctrl_Nostril_L_SkinPoint
+    400108: ADJ_Ctrl_Nostril_R_SkinPoint
+    400110: ADJ_Ctrl_Pelvis_SkinPoint
+    400112: ADJ_Ctrl_RearArm_01_SkinPoint
+    400114: ADJ_Ctrl_RearArm_02_SkinPoint
+    400116: ADJ_Ctrl_RearArm_03_SkinPoint
+    400118: ADJ_Ctrl_RightBrow_L_SkinPoint
+    400120: ADJ_Ctrl_RightBrow_M_SkinPoint
+    400122: ADJ_Ctrl_RightBrow_R_SkinPoint
+    400124: ADJ_Ctrl_RightCableHang_SkinPoint
+    400126: ADJ_Mesh_Backside
+    400128: //RootNode
+    400130: Ref_Center
+    400132: Ref_Head
+    400134: Ref_Origin
+    400136: Ref_Overhead
+    400138: Ref_Target
+    400140: SM_Adjutant_0
+    400142: SM_Adjutant_1
+    400144: SM_Adjutant_10
+    400146: SM_Adjutant_11
+    400148: SM_Adjutant_2
+    400150: SM_Adjutant_3
+    400152: SM_Adjutant_4
+    400154: SM_Adjutant_5
+    400156: SM_Adjutant_6
+    400158: SM_Adjutant_7
+    400160: SM_Adjutant_8
+    400162: SM_Adjutant_9
+    4300000: SM_Adjutant_0
+    4300002: SM_Adjutant_1
+    4300004: SM_Adjutant_2
+    4300006: SM_Adjutant_3
+    4300008: SM_Adjutant_4
+    4300010: SM_Adjutant_5
+    4300012: SM_Adjutant_6
+    4300014: SM_Adjutant_7
+    4300016: SM_Adjutant_8
+    4300018: SM_Adjutant_9
+    4300020: SM_Adjutant_10
+    4300022: SM_Adjutant_11
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SM_Adjutant_0
+    13700002: SM_Adjutant_1
+    13700004: SM_Adjutant_10
+    13700006: SM_Adjutant_11
+    13700008: SM_Adjutant_2
+    13700010: SM_Adjutant_3
+    13700012: SM_Adjutant_4
+    13700014: SM_Adjutant_5
+    13700016: SM_Adjutant_6
+    13700018: SM_Adjutant_7
+    13700020: SM_Adjutant_8
+    13700022: SM_Adjutant_9
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #36'
+    second: {fileID: 2100000, guid: 7e02e39a8c3c87b44912f189b906b333, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #37'
+    second: {fileID: 2100000, guid: 86fd157a1f7560c4b8cfa7a997b8dbf4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #38'
+    second: {fileID: 2100000, guid: 3c5cf0ddde9952f41b5c837f0f105f44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #41'
+    second: {fileID: 2100000, guid: 3c5cf0ddde9952f41b5c837f0f105f44, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
