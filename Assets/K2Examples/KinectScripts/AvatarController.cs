@@ -406,10 +406,9 @@ public class AvatarController : MonoBehaviour
 	}
     private List<string> animations = new List<string>()
         {
-            "look",
             "jazz",
+            "sit",
             "headbutt",
-            "catch",
             "hurt"
         };
 
@@ -417,6 +416,22 @@ public class AvatarController : MonoBehaviour
     {
         //animatorComponent.SetInteger("Pose_Type", id);
         animatorComponent.SetTrigger(animations[id]);
+    }
+
+    public void resetAnimatePose(int id)
+    {
+        //animatorComponent.SetInteger("Pose_Type", id);
+        animatorComponent.ResetTrigger(animations[id]);
+    }
+
+    public void setTrigger(String name)
+    {
+        animatorComponent.SetTrigger(name);
+    }
+
+    public void resetTrigger(String name)
+    {
+        animatorComponent.ResetTrigger(name);
     }
 
     public void startAnimate()

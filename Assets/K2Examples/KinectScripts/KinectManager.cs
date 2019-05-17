@@ -2231,9 +2231,14 @@ public class KinectManager : MonoBehaviour
 
 	void Awake()
 	{
-		// set the singleton instance
-		//instance = this;
-		if (instance == null) 
+        anim = robot.GetComponent<Animator>();
+        anim.enabled = true;
+        origin = gameObject.transform.position;
+        rotation = gameObject.transform.rotation;
+
+        // set the singleton instance
+        //instance = this;
+        if (instance == null) 
 		{
 			instance = this;
 		}
@@ -2850,14 +2855,31 @@ public class KinectManager : MonoBehaviour
 		}
 	}
 
+    void setDown()
+    {
+        down = true;
+    }
+
+    //机器人相关参数
+    public GameObject robot;
+    Animator anim;
+    Vector3 origin;
+    Quaternion rotation;
+    private bool hasUser = false;
+    private bool down = false;
+    private float landingDistance = 0.05f;
+
+
+    private bool animated = true;
     public Boolean isSwitch = false;
     //动画切换计时
     private int clock = 0;
+    private int clockcycle = 200;
     //场景切换计时
     private int tclock = 0;
     private System.Random random = new System.Random();
     private Double slowThreshold = 0.9;
-    private Double obeyThreshold = 0.995;
+    private Double obeyThreshold = 0.990;
     private int poseIndex;
 
 	void Update() 
@@ -2872,11 +2894,75 @@ public class KinectManager : MonoBehaviour
 
             // process the data from Kinect streams
             ProcessKinectStreams();
+
+            // 如果没人时，回到悬空状态
+            if (alUserIds.Count == 0)
+            {
+                anim.enabled = true;
+
+
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                {
+                    anim.ResetTrigger("jump");
+                    anim.SetTrigger("air");
+                    gameObject.transform.position = origin;
+                    gameObject.transform.rotation = rotation;
+                    hasUser = false;
+                }
+                
+                Debug.Log("No user");
+                return;
+                
+            }else if (!hasUser && alUserIds.Count > 0)
+            {
+                // 有人，跳入视野
+                Debug.Log("found user");
+                hasUser = true;
+                down = true;
+                anim.ResetTrigger("air");
+                anim.SetTrigger("jump");
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("jump") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8)
+            {
+                RaycastHit hit;
+                int layerMask = 1 << 8;
+                layerMask = ~layerMask;
+                if (Physics.Raycast(robot.transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
+                {
+                    //Debug.Log(hit.distance);
+                    if (hit.distance < landingDistance)
+                    {
+                        robot.transform.rotation = Quaternion.Euler(0, 180 - MainCamera.transform.eulerAngles.y, 0);
+                    }
+                    else
+                    {
+                        robot.transform.position += Vector3.down * Time.deltaTime;
+                        robot.transform.position += Vector3.right * Time.deltaTime;
+                    }
+                }
+
+
+            }
+
+            // 判断是否进入视野
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("air") || anim.GetCurrentAnimatorStateInfo(0).IsName("jump"))
+            {
+                
+                return;
+            }
+
+            //if (animated)
+            //{
+            //    return;
+            //}
+
             clock += 1;
             //tclock += 1;
-            if (clock == 200)
+            if (clock > 150 && anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
             {
                 clock = 0;
+                clockcycle = random.Next(200, 400);
                 isSwitch = false;
             }
 
@@ -2886,18 +2972,18 @@ public class KinectManager : MonoBehaviour
             if (switch_prob > obeyThreshold)
             {
 
-               
+
                 double slow_prob = random.NextDouble();
                 if (!isSwitch)
                 {
-                    poseIndex = random.Next(0, 4);
+                    poseIndex = random.Next(0, 3);
                     // 动画切换开始计时tclock
                     //tclock = 0;
                     //MainCamera.SetActive(false);
                     //AssistCamera.SetActive(true);
                 }
-                
-                
+
+
                 foreach (AvatarController controller in avatarControllers)
                 {
                     controller.startAnimate();
@@ -2907,14 +2993,12 @@ public class KinectManager : MonoBehaviour
                         controller.setAnimateSpeed(1);
                         controller.setAnimatePose(poseIndex);
                     }
+                    //// 暂停效果
+                    //if (slow_prob > slowThreshold)
+                    //{
+                    //    controller.setAnimateSpeed(0.25f);
+                    //}
 
-
-                    // 暂停效果
-                    if (slow_prob > slowThreshold)
-                    {
-                        controller.setAnimateSpeed(0.25f);
-                    }
-                    
                 }
                 isSwitch = true;
                 return;
@@ -2925,11 +3009,12 @@ public class KinectManager : MonoBehaviour
                 //Debug.Log("obey!");
                 foreach (AvatarController controller in avatarControllers)
                 {
+                    controller.resetAnimatePose(poseIndex);
                     controller.stopAnimate();
                 }
             }
 
-            
+
 
             // update the avatars
             if (!lateUpdateAvatars)
