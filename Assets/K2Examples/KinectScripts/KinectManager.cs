@@ -2910,7 +2910,7 @@ public class KinectManager : MonoBehaviour
                     hasUser = false;
                 }
                 
-                Debug.Log("No user");
+                //Debug.Log("No user");
                 return;
                 
             }else if (!hasUser && alUserIds.Count > 0)
@@ -2962,7 +2962,6 @@ public class KinectManager : MonoBehaviour
             if (clock > 150 && anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
             {
                 clock = 0;
-                clockcycle = random.Next(200, 400);
                 isSwitch = false;
             }
 
@@ -2976,7 +2975,7 @@ public class KinectManager : MonoBehaviour
                 double slow_prob = random.NextDouble();
                 if (!isSwitch)
                 {
-                    poseIndex = random.Next(0, 3);
+                    poseIndex = random.Next(0, 4);
                     // 动画切换开始计时tclock
                     //tclock = 0;
                     //MainCamera.SetActive(false);

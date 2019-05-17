@@ -24,8 +24,8 @@ public class AvatarController : MonoBehaviour
 	[Tooltip("Whether the avatar is allowed to move vertically or not.")]
 	public bool verticalMovement = false;
 
-	[Tooltip("Whether the avatar's root motion is applied by other component or script.")]
-	public bool externalRootMotion = false;
+	//[Tooltip("Whether the avatar's root motion is applied by other component or script.")]
+	public bool externalRootMotion = true;
 
     [Tooltip("Whether the head rotation is controlled externally (e.g. by VR-headset)." )]
     public bool externalHeadRotation = false;
