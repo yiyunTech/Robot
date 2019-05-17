@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.50693476, g: 0.6756583, b: 0.8867996, a: 1}
+  m_IndirectSpecularColor: {r: 0.50688255, g: 0.6756293, b: 0.8866045, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   gestureListeners: []
   calibrationText: {fileID: 0}
   gesturesDebugText: {fileID: 0}
-  robot: {fileID: 0}
+  robot: {fileID: 194773522}
   isSwitch: 0
 --- !u!4 &534557764
 Transform:
@@ -2316,6 +2316,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -2960,6 +2961,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
