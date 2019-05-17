@@ -4,3 +4,8 @@ Temp/
 Output/
 Library/
 obj/Debug/*.cache
+Assets/Poses/*.meta
+Assets/Poses/*.fbx
+Assets/Poses/anim/shorten/*.fbx
+Assets/Poses/anim/shorten/*.meta
+ProjectSettings/*.txt

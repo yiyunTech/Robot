@@ -4,21 +4,29 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 
 public class RobotController : MonoBehaviour {
+    public GameObject camera;
     float speed = 0.5f;
     float rotSpeed = 50;
     float rot = 0f;
     float gravity = 8;
-    
+    const float landingDistance = 0.05f;
+    float rotateSpeed = 1.0f;
+    Vector3 origin;
+    Quaternion rotation;
+
 
     Vector3 moveDir = Vector3.zero;
 
     CharacterController controller;
     Animator anim;
+    bool down = false;
 
     // Use this for initialization
     void Start () {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        origin = gameObject.transform.position;
+        rotation = gameObject.transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -47,60 +55,50 @@ public class RobotController : MonoBehaviour {
         controller.Move(moveDir * Time.deltaTime);
 
 
-
         if (Input.GetKey(KeyCode.Alpha0))
         {
             //anim.SetInteger("Pose_Type", 0);
-            anim.SetTrigger("look");
+            anim.SetTrigger("jump");
+            Invoke("setDown", 3.0f);
+            //setDown();
         }
 
         else if (Input.GetKey(KeyCode.Alpha1))
         {
             //anim.SetInteger("Pose_Type", 1);
-            anim.SetTrigger("jazz");
+            anim.SetTrigger("air");
+            anim.ResetTrigger("jump");
+            gameObject.transform.position = origin;
+            gameObject.transform.rotation = rotation;
         }
 
-        else if (Input.GetKey(KeyCode.Alpha2))
+
+        if (down)
         {
-            //anim.SetInteger("Pose_Type", 2);
-            anim.SetTrigger("headbutt");
+            RaycastHit hit;
+            int layerMask = 1 << 8;
+            layerMask = ~layerMask;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
+            {
+                Debug.Log(hit.distance);
+                if (hit.distance < landingDistance)
+                {
+                    down = false;
+                    transform.rotation = Quaternion.Euler(0, 180 - camera.transform.eulerAngles.y, 0);
+                }
+            }
+
+            gameObject.transform.position += Vector3.down * Time.deltaTime;
+            gameObject.transform.position += Vector3.right * Time.deltaTime;
         }
 
-        else if (Input.GetKey(KeyCode.Alpha3))
-        {
-            //anim.SetInteger("Pose_Type", 3);
-            anim.SetTrigger("hurt");
-        }
+        
 
-        else if (Input.GetKey(KeyCode.Alpha4))
-        {
-            //anim.SetInteger("Pose_Type", 3);
-            anim.SetTrigger("walk");
-        }
+       
+    }
 
-        else if (Input.GetKey(KeyCode.Alpha5))
-        {
-            //anim.SetInteger("Pose_Type", 3);
-            anim.SetTrigger("catch");
-        }
-
-        else if (Input.GetKey(KeyCode.Alpha6))
-        {
-            //anim.SetInteger("Pose_Type", 3);
-            anim.SetTrigger("blow");
-        }
-        else if (Input.GetKey(KeyCode.Alpha7))
-        {
-            //anim.SetInteger("Pose_Type", 3);
-            anim.SetTrigger("roll");
-        }
-        else if (Input.GetKey(KeyCode.Alpha8))
-        {
-            //anim.SetInteger("Pose_Type", 9);
-            anim.enabled = false;
-        }else if (Input.GetKey(KeyCode.Alpha9))
-        {
-            anim.enabled = true;
-        }
+    void setDown()
+    {
+        down = true;
     }
 }

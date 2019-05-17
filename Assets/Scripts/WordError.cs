@@ -7,12 +7,10 @@ public class WordError : MonoBehaviour
 {
 
     public Shader curShader;
-
-   
     VideoPlayer _videoPlayer;
-
-  
     public VideoClip video;
+
+
 
     [SerializeField, Range(0, 1)]
     public float Threshold;
@@ -24,6 +22,18 @@ public class WordError : MonoBehaviour
 
     private Material curMaterial;
     float _totalAlpha = 0.0f;
+
+
+    System.Random CurRand;
+    float _curTime = 0.0f;
+    //public float minDisplayTime = 3.0f;
+    //public float maxDisplayTime = 5.0f;
+    public float displayTime = 4.0f;
+    float _durationTime = 0.0f;
+    public float minWaitTime = 8.0f;
+    public float maxWaitTime = 12.0f;
+    float waitTime = 0.0f;
+    public bool _isDisplay = false;
 
 
     public int TestTag = 0;
@@ -51,16 +61,67 @@ public class WordError : MonoBehaviour
     #endregion
 
 
-   
+    void _videoPlay()
+    {
+        _isDisplay = true;
+
+        _durationTime = 0.0f;
+
+        //CurVideo = 2;
+
+       
+        _videoPlayer.Play();
+       
+
+    }
+
+    void _videoStop()
+    {
+        _isDisplay = false;
+        _durationTime = 0.0f;
+        waitTime = (float)CurRand.NextDouble() * (maxWaitTime - minWaitTime) + minWaitTime;
+
+        _videoPlayer.Stop();
+       
+    }
+
+
+
+    void _updateVideoState()
+    {
+        _durationTime += Time.deltaTime;
+
+        if (_isDisplay)
+        {
+            if (_durationTime > displayTime)
+            {
+                _videoStop();
+            }
+        }
+        else
+        {
+            if (_durationTime > waitTime)
+            {
+                _videoPlay();
+            }
+        }
+
+
+    }
+
+
 
     // Use this for initialization
     void Start()
     {
+        CurRand = new System.Random();
+
         _videoPlayer = GetComponents<VideoPlayer>()[1];
         _videoPlayer.clip = video;
 
         //_videoPlayer = this.GetComponent<VideoPlayer>();
-        _videoPlayer.Play();
+        //_videoPlayer.Play();
+        _videoPlay();
 
     }
 
@@ -68,7 +129,7 @@ public class WordError : MonoBehaviour
 
     void OnRenderImage(RenderTexture sourceTexture, RenderTexture destTexture)
     {
-
+        _updateVideoState();
         
         if (curShader)
         {

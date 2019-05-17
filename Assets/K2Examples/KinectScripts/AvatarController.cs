@@ -24,8 +24,8 @@ public class AvatarController : MonoBehaviour
 	[Tooltip("Whether the avatar is allowed to move vertically or not.")]
 	public bool verticalMovement = false;
 
-	[Tooltip("Whether the avatar's root motion is applied by other component or script.")]
-	public bool externalRootMotion = false;
+	//[Tooltip("Whether the avatar's root motion is applied by other component or script.")]
+	public bool externalRootMotion = true;
 
     [Tooltip("Whether the head rotation is controlled externally (e.g. by VR-headset)." )]
     public bool externalHeadRotation = false;
@@ -406,10 +406,9 @@ public class AvatarController : MonoBehaviour
 	}
     private List<string> animations = new List<string>()
         {
-            "look",
             "jazz",
+            "sit",
             "headbutt",
-            "catch",
             "hurt"
         };
 
@@ -417,6 +416,22 @@ public class AvatarController : MonoBehaviour
     {
         //animatorComponent.SetInteger("Pose_Type", id);
         animatorComponent.SetTrigger(animations[id]);
+    }
+
+    public void resetAnimatePose(int id)
+    {
+        //animatorComponent.SetInteger("Pose_Type", id);
+        animatorComponent.ResetTrigger(animations[id]);
+    }
+
+    public void setTrigger(String name)
+    {
+        animatorComponent.SetTrigger(name);
+    }
+
+    public void resetTrigger(String name)
+    {
+        animatorComponent.ResetTrigger(name);
     }
 
     public void startAnimate()

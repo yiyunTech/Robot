@@ -2231,9 +2231,14 @@ public class KinectManager : MonoBehaviour
 
 	void Awake()
 	{
-		// set the singleton instance
-		//instance = this;
-		if (instance == null) 
+        anim = robot.GetComponent<Animator>();
+        anim.enabled = true;
+        origin = gameObject.transform.position;
+        rotation = gameObject.transform.rotation;
+
+        // set the singleton instance
+        //instance = this;
+        if (instance == null) 
 		{
 			instance = this;
 		}
@@ -2850,14 +2855,31 @@ public class KinectManager : MonoBehaviour
 		}
 	}
 
+    void setDown()
+    {
+        down = true;
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½
+    public GameObject robot;
+    Animator anim;
+    Vector3 origin;
+    Quaternion rotation;
+    private bool hasUser = false;
+    private bool down = false;
+    private float landingDistance = 0.05f;
+
+
+    private bool animated = true;
     public Boolean isSwitch = false;
-    //¶¯»­ÇÐ»»¼ÆÊ±
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ê±
     private int clock = 0;
-    //³¡¾°ÇÐ»»¼ÆÊ±
+    private int clockcycle = 200;
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ê±
     private int tclock = 0;
     private System.Random random = new System.Random();
     private Double slowThreshold = 0.9;
-    private Double obeyThreshold = 0.995;
+    private Double obeyThreshold = 0.990;
     private int poseIndex;
 
 	void Update() 
@@ -2872,9 +2894,64 @@ public class KinectManager : MonoBehaviour
 
             // process the data from Kinect streams
             ProcessKinectStreams();
+
+            // ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+            if (alUserIds.Count == 0)
+            {
+                anim.enabled = true;
+                //if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                //{
+                //    anim.ResetTrigger("jump");
+                //    anim.SetTrigger("air");
+                gameObject.transform.position = origin;
+                gameObject.transform.rotation = rotation;
+                //    hasUser = false;
+                //}              
+                //Debug.Log("No user");
+                return;
+                
+            }else if (!hasUser && alUserIds.Count > 0)
+            {
+                // ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò°
+                Debug.Log("found user");
+                //hasUser = true;
+                //down = true;
+                //anim.ResetTrigger("air");
+                //anim.SetTrigger("jump");
+            }
+
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsName("jump") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8)
+            //{
+            //    RaycastHit hit;
+            //    int layerMask = 1 << 8;
+            //    layerMask = ~layerMask;
+            //    if (Physics.Raycast(robot.transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
+            //    {
+            //        //Debug.Log(hit.distance);
+            //        if (hit.distance < landingDistance)
+            //        {
+            //            robot.transform.rotation = Quaternion.Euler(0, 180 - MainCamera.transform.eulerAngles.y, 0);
+            //        }
+            //        else
+            //        {
+            //            robot.transform.position += Vector3.down * Time.deltaTime;
+            //            robot.transform.position += Vector3.right * Time.deltaTime;
+            //        }
+            //    }
+
+
+            //}
+
+            // ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò°
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsName("air") || anim.GetCurrentAnimatorStateInfo(0).IsName("jump"))
+            //{
+                
+            //    return;
+            //}
+
             clock += 1;
             //tclock += 1;
-            if (clock == 200)
+            if (clock > 150 && anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
             {
                 clock = 0;
                 isSwitch = false;
@@ -2886,35 +2963,33 @@ public class KinectManager : MonoBehaviour
             if (switch_prob > obeyThreshold)
             {
 
-               
+
                 double slow_prob = random.NextDouble();
                 if (!isSwitch)
                 {
                     poseIndex = random.Next(0, 4);
-                    // ¶¯»­ÇÐ»»¿ªÊ¼¼ÆÊ±tclock
+                    // ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ê±tclock
                     //tclock = 0;
                     //MainCamera.SetActive(false);
                     //AssistCamera.SetActive(true);
                 }
-                
-                
+
+
                 foreach (AvatarController controller in avatarControllers)
                 {
                     controller.startAnimate();
-                    // Ò»¸öclockÖÜÆÚ±£³ÖÒ»¸ö¶¯×÷
+                    // Ò»ï¿½ï¿½clockï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     if (!isSwitch)
                     {
                         controller.setAnimateSpeed(1);
                         controller.setAnimatePose(poseIndex);
                     }
+                    //// ï¿½ï¿½Í£Ð§ï¿½ï¿½
+                    //if (slow_prob > slowThreshold)
+                    //{
+                    //    controller.setAnimateSpeed(0.25f);
+                    //}
 
-
-                    // ÔÝÍ£Ð§¹û
-                    if (slow_prob > slowThreshold)
-                    {
-                        controller.setAnimateSpeed(0.25f);
-                    }
-                    
                 }
                 isSwitch = true;
                 return;
@@ -2925,11 +3000,12 @@ public class KinectManager : MonoBehaviour
                 //Debug.Log("obey!");
                 foreach (AvatarController controller in avatarControllers)
                 {
+                    controller.resetAnimatePose(poseIndex);
                     controller.stopAnimate();
                 }
             }
 
-            
+
 
             // update the avatars
             if (!lateUpdateAvatars)

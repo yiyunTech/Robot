@@ -15,18 +15,18 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.6267344, g: 0.61552155, b: 0.9811321, a: 1}
-  m_FogMode: 1
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1.0275655, g: 1.2216082, b: 2.984163, a: 1}
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1.4
-  m_AmbientMode: 3
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: decb245c9a2edab4880ff13bdfe08c36, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4dcf6251eb8a80a44b56a54f19d07504, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.50693476, g: 0.6756583, b: 0.8867996, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -352,7 +352,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.5990566, g: 0.9608678, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
@@ -386,13 +386,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 170076733}
-  m_LocalRotation: {x: 0.68089986, y: 0.7232569, z: -0.10472016, w: -0.048047867}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: -0.2, y: 4.04, z: 0.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 4.9360003, y: 192.29199, z: 87.076004}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!95 &170076736
 Animator:
   serializedVersion: 3
@@ -473,9 +473,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
-  mirroredMovement: 0
-  verticalMovement: 0
-  externalRootMotion: 0
+  mirroredMovement: 1
+  verticalMovement: 1
+  externalRootMotion: 1
   externalHeadRotation: 0
   externalHandRotations: 0
   fingerOrientations: 0
@@ -1501,7 +1501,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 518102357}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 51038789f3620e442ab4fd61425dc96d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: db89a78407c6d674792aaed90e6e2b96, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1639,6 +1639,7 @@ MonoBehaviour:
   gestureListeners: []
   calibrationText: {fileID: 0}
   gesturesDebugText: {fileID: 0}
+  robot: {fileID: 0}
   isSwitch: 0
 --- !u!4 &534557764
 Transform:
@@ -2115,9 +2116,9 @@ GameObject:
   - component: {fileID: 924730634}
   - component: {fileID: 924730635}
   - component: {fileID: 924730637}
+  - component: {fileID: 924730640}
   - component: {fileID: 924730636}
   - component: {fileID: 924730641}
-  - component: {fileID: 924730640}
   - component: {fileID: 924730639}
   - component: {fileID: 924730638}
   m_Layer: 0
@@ -2138,7 +2139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
 --- !u!81 &924730632
 AudioListener:
@@ -2156,7 +2157,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.990566, g: 0.81768423, b: 0.81768423, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -2229,7 +2230,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924730630}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9863a0373fc41fe448ed4c0bba0360f6, type: 3}
   m_Name: 
@@ -2251,7 +2252,7 @@ MonoBehaviour:
   _scanLineJitter: 0.274
   _verticalJump: 0.017
   _horizontalShake: 0.022
-  _colorDrift: 0.202
+  _colorDrift: 0
 --- !u!328 &924730637
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -2373,6 +2374,10 @@ MonoBehaviour:
   Threshold: 0.183
   WordWeight: 1.24
   WordColor: {r: 0.6650822, g: 0, b: 0.9150943, a: 1}
+  displayTime: 4
+  minWaitTime: 6
+  maxWaitTime: 10
+  _isDisplay: 0
   TestTag: 0
 --- !u!328 &924730641
 VideoPlayer:
@@ -2402,7 +2407,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 1
+  m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
 --- !u!1 &969457883
@@ -3055,7 +3060,7 @@ RectTransform:
   m_LocalScale: {x: 0.45, y: 1, z: 0.22500011}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
